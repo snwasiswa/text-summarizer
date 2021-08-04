@@ -11,6 +11,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
 
+
 class Summary:
 
     def __init__(self, text):
@@ -21,14 +22,12 @@ class Summary:
         self.all_sentences = sent_tokenize(self.text)
         self.score_sentence = {}
 
-
     def tokenize_text(self):
         """ Splitting text into words"""
 
         words = word_tokenize(self.text)
 
         return words
-
 
     def score_word(self):
         """ Keeps track of the frequency of words in a text or sentence"""
